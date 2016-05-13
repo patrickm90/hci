@@ -1,9 +1,11 @@
-package at.ac.univie.labofthings;
+package at.ac.univie.labofthings.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class DashBoard extends AppCompatActivity {
+import at.ac.univie.labofthings.R;
+
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
