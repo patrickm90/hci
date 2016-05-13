@@ -1,0 +1,34 @@
+M3 Erstellung und Analyse der App
+
+    Leiten sie aus der Ideensammlung und den low-fidelity Prototypen ein stimmiges Konzept für ihre App ab.
+    Implementieren Sie die App mit dem von ihnen geplanten Spektrum an Aufgaben und Funktionen (high-fidelity Prototyp).
+        Stellen sie sicher dass ihr Interface die Komplexität des zugrundeliegenden Problems realistisch widerspiegelt (z.b. hinsichtlich der Anzahl an Songs im Falle des Million Song Themas).
+        Anmerkung: technische Details des Backends dürfen prototypisch realisiert werden (high-fidelity Prototyp der App). 
+    Begründen sie Design Entscheidungen und nehmen sie insbesondere Bezug auf die Aufgaben- und Nutzeranalyse aus M1!
+    Überprüfen Sie Ihre App auf potentielle Probleme respektive Farbenblindheit. Verwenden sie hierfür Onlinesimulatoren wie z.B. «Colorblind Web Page Filter», «Color Blindness Simulator» oder «Coblis». Passen Sie Ihr Farbschema entsprechend an und dokumentieren Sie Ergebnisse und Änderungen (Screenshots, evtl. vorher/nachher + ca. 0,5 Seiten Text)
+    Wenden Sie mindestens zwei der in der Vorlesung besprochenen kognitiven Modelle/Regeln (z.B. Fitts' Law, Hick's Law, 7+/-2 Regel, GOMS, etc.) an um das Interaktionskonzpet Ihres Prototypen zu verbessern. Dokumentieren sie die Ergebnisse dieser Analyse und beschreiben Sie konkrete Design-Verbesserungen (ca. 0,5 Seite Text)
+    Implementieren Sie alle Verbesserungen im Prototypen. 
+
+M3 Abgabe (vorläufig)
+
+    Funktionsfähiger Prototyp (inkl. Code)
+        Geben sie ebenfalls eine Readme.md Datei mit ab. Folgen Sie dabei folgender Struktur: Readme-Grundgerüst.
+        Anmerkung: Ein nicht lauffähige Prototyp gibt bis zu 50% Abzug der Gesamtpunkte. Für formelle Dinge wie schlecht lesbaren oder strukturierten Code (sinnvolle Klassen- und Methodennamen, Code ist kommentiert, Einrückungen etc.) gibt es bis zu 10% Abzug der Gesamtpunkte. 
+    Screenshots + Beschreibung des Prototypen hinsichtlich Funktionen, Inhalte und Interaktionen (pdf, ca. 2-3 Seiten Text + Screenshots)
+    Bericht der farblichen und kognitiven Analyse und resultierenden Verbesserungen (pdf, ca. 1 Seiten Text + Screenshots)
+    nur für Vortragende: Präsentationsfolien für max. 10 Min. Präsentation vorbereiten. Bitte benützen sie dafür den eigenen Upload-Bereich "M3 - Upload für Präsentationsfolien" (Folien können dort bis zum Datum der eigentlich Präsentation hochgeladen werden, dafür gibt es selbstverständlich keinen Punktabzug!) 
+
+M3 Bewertungsschema (Änderungen vorbehalten)
+
+    PT (Software) — 50%
+        Readme & code 10%
+        Funktioniert 20%
+        Komplexitaet/Qualitaet 20%
+        Backend gut (evtl Sonderpunkte falls backend sehr gut und front end aber etwas “gelitten” hat) 
+    Schriftliche Abgabe — 50%
+        PT Beschreibung 25%
+            Designentscheidungen 20%
+            Rückbezug auf früher Meilensteine 5% 
+        Kognitive Analyse 25%
+            Farbenblindheit test + evtl Anpassung 5%
+            2x kognitive Modelle: 2x 10% 
