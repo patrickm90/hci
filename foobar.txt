@@ -4,4 +4,10 @@ lorem ipsum
 
 12
 
+<<<<<<< HEAD
 lorem ipsum1212
+=======
+lorem ipsum12
+
+123
+>>>>>>> c69fe993c31fc9118ba5972b568c976471f59656
