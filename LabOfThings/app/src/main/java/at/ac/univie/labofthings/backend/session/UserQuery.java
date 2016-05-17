@@ -11,7 +11,7 @@ public class UserQuery {
     private final static User lab = new User("lab", "lab", UserType.Lab);
     private final static User control = new User("control", "control", UserType.Control);
 
-    public static List<User> getUserList()
+    private static List<User> getUserList()
     {
         List<User> userList = new ArrayList<>();
         userList.add(admin);
@@ -20,7 +20,6 @@ public class UserQuery {
 
         return userList;
     }
-
     public static User Login(String userName, String password)
     {
         for(User user : getUserList())
