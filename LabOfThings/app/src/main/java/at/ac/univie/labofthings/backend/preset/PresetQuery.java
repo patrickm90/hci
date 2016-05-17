@@ -39,7 +39,7 @@ public class PresetQuery {
         return null;
     }
 
-    private static List<Preset> getPresetList()
+    public static List<Preset> getPresetList()
     {
         List<Preset> presets = new ArrayList<>();
         int presetCount = new Random().nextInt(50) + 5;
