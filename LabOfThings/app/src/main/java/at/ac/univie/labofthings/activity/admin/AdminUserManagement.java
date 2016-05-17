@@ -62,7 +62,7 @@ public class AdminUserManagement extends AppCompatActivity {
         spaceTblRow.setPadding(0,50,0,0);
 
         userTable.addView(spaceTblRow);
-        
+
         for(User user : UserQuery.getUserList())
         {
             TableRow row = new TableRow(this);
@@ -72,10 +72,6 @@ public class AdminUserManagement extends AppCompatActivity {
             CheckBox isAdmin = new CheckBox(this);
             CheckBox isMonitoring = new CheckBox(this);
             CheckBox isUser = new CheckBox(this);
-
-            //isAdmin.setEnabled(false);
-            //isMonitoring.setEnabled(false);
-            //isUser.setEnabled(false);
 
             if(user.getUserType() == User.UserType.Admin)
             {
