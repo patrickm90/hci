@@ -24,4 +24,6 @@
     <string name="frequency2">second</string>
     <string name="frequency3">third</string>
 
+    <string name="btn_preset_admin_choice">Choose Presetmanagement</string>
+    <string name="btn_user_admin_choice">Choose Usermanagement</string>
 </resources>

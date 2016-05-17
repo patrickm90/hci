@@ -17,8 +17,9 @@
         </activity>
         <activity android:name=".activity.admin.AdminMainActivity" />
         <activity android:name=".activity.monitor.MonitorMainActivity" />
-        <activity android:name=".activity.user.UserMainActivity">
-        </activity>
+        <activity android:name=".activity.user.UserMainActivity" />
+        <activity android:name=".activity.admin.AdminPresetManagement" />
+        <activity android:name=".activity.admin.AdminUserManagement"></activity>
     </application>
 
 </manifest>
