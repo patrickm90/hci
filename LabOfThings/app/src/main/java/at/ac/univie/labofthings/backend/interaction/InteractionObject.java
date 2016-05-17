@@ -8,6 +8,8 @@ public class InteractionObject {
     private String name;
     private String description;
 
+    protected final String onOffError = "Device not on!";
+
     public Boolean getOnOffState() {
         return onOffState;
     }
