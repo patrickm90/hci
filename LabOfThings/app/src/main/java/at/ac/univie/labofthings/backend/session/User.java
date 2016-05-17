@@ -3,13 +3,14 @@ package at.ac.univie.labofthings.backend.session;
 /**
  * Created by Patrick on 13/05/2016.
  */
-enum UserType
-{
-    Monitor,
-    User,
-    Admin
-}
+
 public class User {
+    public static enum UserType
+    {
+        Monitor,
+        User,
+        Admin
+    }
     private String userName;
     private String password;
     private UserType userType;

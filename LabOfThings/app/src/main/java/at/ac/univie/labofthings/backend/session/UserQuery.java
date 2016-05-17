@@ -7,9 +7,9 @@ import java.util.List;
  * Created by Patrick on 13/05/2016.
  */
 public class UserQuery {
-    private final static User admin = new User("admin", "admin", UserType.Admin);
-    private final static User lab = new User("lab", "lab", UserType.User);
-    private final static User control = new User("control", "control", UserType.Monitor);
+    private final static User admin = new User("admin", "admin", User.UserType.Admin);
+    private final static User lab = new User("lab", "lab", User.UserType.User);
+    private final static User control = new User("control", "control", User.UserType.Monitor);
 
     private static List<User> getUserList()
     {
