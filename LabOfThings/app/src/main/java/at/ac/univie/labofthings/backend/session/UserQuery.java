@@ -11,7 +11,7 @@ public class UserQuery {
     private final static User lab = new User("lab", "lab", User.UserType.User);
     private final static User control = new User("control", "control", User.UserType.Monitor);
 
-    private static List<User> getUserList()
+    public static List<User> getUserList()
     {
         List<User> userList = new ArrayList<>();
         userList.add(admin);

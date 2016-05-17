@@ -13,4 +13,6 @@
         <item>Controller</item>
 
     </string-array>
+    <string name="btn_preset_admin_choice">Choose Presetmanagement</string>
+    <string name="btn_user_admin_choice">Choose Usermanagement</string>
 </resources>
