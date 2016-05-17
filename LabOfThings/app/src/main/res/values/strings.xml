@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">LabOfThings</string>
     <string name="test">test</string>
+    <string name="login_text">Please enter your username and password</string>
+    <string name="username_text">username</string>
+    <string name="password_text">password</string>
+    <string name="loginButton_text">login</string>
+
+    <string name="select_mode">Choose a mode</string>
+    <string-array name="login_modes">
+        <item>User</item>
+        <item>Admin</item>
+        <item>Controller</item>
+
+    </string-array>
 </resources>
