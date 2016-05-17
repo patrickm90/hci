@@ -1,9 +1,19 @@
 package at.ac.univie.labofthings.backend.interaction;
 
+import java.util.Random;
+
 /**
  * Created by Patrick on 13/05/2016.
  */
 public class InteractionObject {
+
+    public enum DamageState
+    {
+        Totally,
+        Partial,
+        None
+    }
+
     private Boolean onOffState;
     private String name;
     private String description;
@@ -38,5 +48,21 @@ public class InteractionObject {
         this.onOffState = onOffState;
         this.name = name;
         this.description = description;
+    }
+    public DamageState checkForPossibleDamage()
+    {
+        int state = new Random().nextInt(3);
+        if(state == 0)
+        {
+            return DamageState.Totally;
+        }
+        else if(state == 1)
+        {
+            return DamageState.Partial;
+        }
+        else
+        {
+            return DamageState.None;
+        }
     }
 }
