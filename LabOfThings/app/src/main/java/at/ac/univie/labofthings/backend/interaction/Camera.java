@@ -14,4 +14,9 @@ public class Camera extends InteractionObject {
         return "base64base64base64";
 
     }
+    @Override
+    public TypOfCategory getCatgory()
+    {
+        return TypOfCategory.Display;
+    }
 }

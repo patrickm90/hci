@@ -46,4 +46,9 @@ public class LightSensor extends InteractionObject {
         this.lightRGBColorCodeAvailable = lightRGBColorCodeAvailable;
 
     }
+    @Override
+    public TypOfCategory getCatgory()
+    {
+        return TypOfCategory.Light;
+    }
 }

@@ -13,6 +13,13 @@ public class InteractionObject {
         Partial,
         None
     }
+    public enum TypOfCategory
+    {
+        Display,
+        Light,
+        Mechanic,
+        Triggered
+    }
 
     private Boolean onOffState;
     private String name;
@@ -64,5 +71,9 @@ public class InteractionObject {
         {
             return DamageState.None;
         }
+    }
+    public TypOfCategory getCatgory() throws Exception {
+        throw new Exception("Override!");
+
     }
 }

@@ -38,4 +38,9 @@ public class SpeechRecognition extends InteractionObject {
 
         return speechString;
     }
+    @Override
+    public TypOfCategory getCatgory()
+    {
+        return TypOfCategory.Triggered;
+    }
 }

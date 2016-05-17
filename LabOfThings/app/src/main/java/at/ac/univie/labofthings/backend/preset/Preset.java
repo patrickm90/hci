@@ -9,6 +9,8 @@ import at.ac.univie.labofthings.backend.interaction.InteractionObject;
  * Created by Patrick on 17/05/2016.
  */
 public class Preset {
+    public String Name;
+
     private List<InteractionObject> objects = new ArrayList<>();
 
     public void addObject(InteractionObject object)

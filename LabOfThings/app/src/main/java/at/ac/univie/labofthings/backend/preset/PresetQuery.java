@@ -47,6 +47,7 @@ public class PresetQuery {
         for(int i = 0; i < presetCount; i++)
         {
             Preset preset = new Preset();
+            preset.Name = "Preset " + i;
             int objectsCount = new Random().nextInt(50) + 5;
             for(int j = 0; j < objectsCount; j++)
             {

@@ -53,5 +53,10 @@ public class Drone extends InteractionObject {
             throw new Exception(super.onOffError);
         this.z = this.z-1;
     }
+    @Override
+    public TypOfCategory getCatgory()
+    {
+        return TypOfCategory.Mechanic;
+    }
 
 }
