@@ -1,4 +1,4 @@
-package at.ac.univie.labofthings.activity;
+package at.ac.univie.labofthings.activity.monitor;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

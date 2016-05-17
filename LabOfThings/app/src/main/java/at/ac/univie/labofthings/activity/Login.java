@@ -9,6 +9,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import at.ac.univie.labofthings.R;
+import at.ac.univie.labofthings.activity.admin.AdminMainActivity;
+import at.ac.univie.labofthings.activity.monitor.MonitorMainActivity;
+import at.ac.univie.labofthings.activity.user.UserMainActivity;
 import at.ac.univie.labofthings.backend.session.User;
 import at.ac.univie.labofthings.backend.session.UserQuery;
 

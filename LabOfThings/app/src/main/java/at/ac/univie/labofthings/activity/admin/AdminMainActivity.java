@@ -1,4 +1,4 @@
-package at.ac.univie.labofthings.activity;
+package at.ac.univie.labofthings.activity.admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
