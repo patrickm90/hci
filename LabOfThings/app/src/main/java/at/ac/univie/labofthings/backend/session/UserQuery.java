@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class UserQuery {
     private final static User admin = new User("admin", "admin", UserType.Admin);
-    private final static User lab = new User("lab", "lab", UserType.Lab);
-    private final static User control = new User("control", "control", UserType.Control);
+    private final static User lab = new User("lab", "lab", UserType.User);
+    private final static User control = new User("control", "control", UserType.Monitor);
 
     private static List<User> getUserList()
     {

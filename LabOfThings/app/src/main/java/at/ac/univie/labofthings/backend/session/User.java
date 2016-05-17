@@ -5,8 +5,8 @@ package at.ac.univie.labofthings.backend.session;
  */
 enum UserType
 {
-    Lab,
-    Control,
+    Monitor,
+    User,
     Admin
 }
 public class User {
@@ -39,5 +39,5 @@ public class User {
     public UserType getUserType() {
         return userType;
     }
-    
+
 }
