@@ -23,7 +23,11 @@
     <string name="frequency1">first</string>
     <string name="frequency2">second</string>
     <string name="frequency3">third</string>
+    <string name="searchButton">Search</string>
+    <string name="showAll">showAll</string>
+
 
     <string name="btn_preset_admin_choice">Choose Presetmanagement</string>
     <string name="btn_user_admin_choice">Choose Usermanagement</string>
+
 </resources>

@@ -34,79 +34,48 @@
             android:layout_width="244dp"
             android:layout_height="wrap_content"
             android:text="@string/frequency1"
-            android:id="@+id/button" />
+            android:id="@+id/frequencyButton1" />
 
         <Button
             android:layout_width="244dp"
             android:layout_height="wrap_content"
             android:text="@string/frequency2"
-            android:id="@+id/button2" />
+            android:id="@+id/frequencyButton2" />
 
         <Button
             android:layout_width="246dp"
             android:layout_height="wrap_content"
             android:text="@string/frequency3"
-            android:id="@+id/button3" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/userMainCat"
-            android:id="@+id/catText"
-             />
+            android:id="@+id/frequencyButton3" />
 
 
     </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true">
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:weightSum="1">
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="@string/cat2"
-                    android:id="@+id/cat2Button"
-                    android:layout_toEndOf="@+id/cat3Button"
-                    android:layout_gravity="right" />
+        <EditText
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seachInputField"
+            android:layout_weight="0.68" />
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:text="@string/cat3"
-                    android:id="@+id/cat3Button"
-                    android:layout_alignParentStart="true"
-                    android:layout_gravity="center_horizontal" />
-            </LinearLayout>
-
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:text="@string/cat1"
-                android:id="@+id/cat1Button"/>
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:text="@string/cat4"
-                android:id="@+id/cat4Button"
-                android:layout_alignParentStart="true" />
-           </LinearLayout>
+            android:text="@string/searchButton"
+            android:id="@+id/doSearchButton"
+            android:layout_weight="0.17" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showAll"
+        android:id="@+id/showAllButton"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
