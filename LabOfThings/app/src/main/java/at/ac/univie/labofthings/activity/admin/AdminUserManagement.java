@@ -1,9 +1,14 @@
 package at.ac.univie.labofthings.activity.admin;
 
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -24,6 +29,16 @@ public class AdminUserManagement extends AppCompatActivity {
         setContentView(R.layout.activity_admin_user_management);
 
         showUsers();
+
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), AdminUserCreation.class);
+                startActivity(intent);
+            }
+        });
     }
     protected void showUsers()
     {
