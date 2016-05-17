@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +7,106 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.user.UserMainActivity">
+    tools:context=".activity.user.UserMainActivity"
+    android:orientation="vertical">
 
-</RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="348dp"
+        android:layout_height="39dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/userMainFrequentlyUsed"
+            android:id="@+id/textView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:text="@string/frequency1"
+            android:id="@+id/button" />
+
+        <Button
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:text="@string/frequency2"
+            android:id="@+id/button2" />
+
+        <Button
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:text="@string/frequency3"
+            android:id="@+id/button3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/userMainCat"
+            android:id="@+id/catText"
+             />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="@string/cat2"
+                    android:id="@+id/cat2Button"
+                    android:layout_toEndOf="@+id/cat3Button"
+                    android:layout_gravity="right" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="@string/cat3"
+                    android:id="@+id/cat3Button"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="@string/cat1"
+                android:id="@+id/cat1Button"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="@string/cat4"
+                android:id="@+id/cat4Button"
+                android:layout_alignParentStart="true" />
+           </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
