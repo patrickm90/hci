@@ -6,6 +6,7 @@ package at.ac.univie.labofthings.backend.interaction;
 public class Drone extends InteractionObject {
     private int x;
     private int y;
+    private int z;
 
     public int getX() {
         return x;
@@ -15,6 +16,9 @@ public class Drone extends InteractionObject {
         return y;
     }
 
+    public int getZ() {
+        return z;
+    }
 
     public Drone(Boolean onOffState, String name, String description) {
         super(onOffState, name, description);
@@ -39,6 +43,15 @@ public class Drone extends InteractionObject {
             throw new Exception(super.onOffError);
         this.y = this.y-1;
     }
-
+    public void moveForward() throws Exception {
+        if(!super.getOnOffState())
+            throw new Exception(super.onOffError);
+        this.z = this.z-1;
+    }
+    public void moveBackward() throws Exception {
+        if(!super.getOnOffState())
+            throw new Exception(super.onOffError);
+        this.z = this.z-1;
+    }
 
 }
