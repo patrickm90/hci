@@ -29,5 +29,5 @@
 
     <string name="btn_preset_admin_choice">Choose Presetmanagement</string>
     <string name="btn_user_admin_choice">Choose Usermanagement</string>
-
+    <string name="title_activity_tt">tt</string>
 </resources>
