@@ -2,6 +2,7 @@ package at.ac.univie.labofthings.activity.admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -83,8 +84,9 @@ public class AdminUserCreation extends AppCompatActivity {
 
         userTable.addView(buttonSpaceRow);
 
-
-
-
+    }
+    public void btn_save_onClick(View v)
+    {
+        finish();
     }
 }

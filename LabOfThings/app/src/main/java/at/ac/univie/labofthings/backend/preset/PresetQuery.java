@@ -15,7 +15,7 @@ import at.ac.univie.labofthings.backend.interaction.SpeechRecognition;
  */
 public class PresetQuery {
 
-    private static InteractionObject generateRandomInterActionObject(int number)
+    public static InteractionObject generateRandomInterActionObject(int number)
     {
         int rd = new Random().nextInt(4);
 

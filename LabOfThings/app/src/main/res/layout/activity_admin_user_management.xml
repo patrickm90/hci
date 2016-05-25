@@ -24,6 +24,7 @@
         android:layout_below="@id/tbl_userTable"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:onClick="btn_save_onClick"
         android:id="@+id/btn_save"
         android:text="Save"
         />

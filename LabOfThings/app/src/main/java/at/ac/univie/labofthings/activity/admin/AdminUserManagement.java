@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,5 +109,9 @@ public class AdminUserManagement extends AppCompatActivity {
             userTable.addView(row);
         }
 
+    }
+    public void btn_save_onClick(View v)
+    {
+        Toast.makeText(getApplicationContext(), "Permission successfully saved!", Toast.LENGTH_LONG).show();
     }
 }
