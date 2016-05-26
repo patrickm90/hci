@@ -14,8 +14,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="at.ac.univie.labofthings.activity.admin.AdminUserManagement">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_input_add" />
+
+
     <TableLayout
         android:layout_width="fill_parent"
+        android:layout_below="@id/fab"
         android:layout_height="wrap_content"
         android:stretchColumns="0,1,2,3"
         android:id="@+id/tbl_userTable">
@@ -30,14 +42,7 @@
         />
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_below="@id/btn_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_add" />
+
 
 </RelativeLayout>
     </ScrollView>
