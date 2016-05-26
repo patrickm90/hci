@@ -10,27 +10,59 @@
     tools:context=".activity.monitor.MonitorMainActivity"
     android:orientation="vertical">
 
-    <ScrollView
+
+    <TextView
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:text="@string/alertHeadline"
+        android:textStyle="bold"
+        android:id="@+id/textView2"
+        android:textAlignment="center" />
+
+    <TableLayout
+
         android:layout_width="fill_parent"
         android:layout_height="100dp"
-        android:background="#FFFFFF" >
+        android:background="@drawable/monitorbgalert"
+        >
+        <ScrollView
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+
+            >
+
     <TableLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        android:stretchColumns="0,1,2"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:isScrollContainer="true"
-        android:id="@+id/frameAlert">
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:isScrollContainer="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/frameAlert"
+        android:textAlignment="center"
+
+        >
+
+
+
     </TableLayout>
-    </ScrollView>
+
+        </ScrollView>
+    </TableLayout>
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="351dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/userMainCat"
         android:id="@+id/catText"
-        />
+        android:layout_marginTop="50dp"
+        android:textAlignment="center" />
 
     <LinearLayout
         android:orientation="vertical"

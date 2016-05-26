@@ -4,41 +4,31 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-
 import android.view.View.OnClickListener;
-
-import java.util.ArrayList;
 import java.util.List;
-
 import at.ac.univie.labofthings.R;
 import at.ac.univie.labofthings.backend.interaction.InteractionObject;
-import at.ac.univie.labofthings.backend.preset.Preset;
 import at.ac.univie.labofthings.backend.preset.PresetQuery;
+
+import static at.ac.univie.labofthings.R.layout.activity_monitor_main;
 
 public class MonitorMainActivity extends AppCompatActivity {
     List<InteractionObject> firstPreset;
-
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.setTitle("Montior View");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_monitor_main);
+        setContentView(activity_monitor_main);
 
         TableLayout frameAlert = (TableLayout) findViewById(R.id.frameAlert);
-        //TableLayout frameSensors = (TableLayout) findViewById(R.id.frameSensors);
 
         firstPreset = PresetQuery.getPresetList().get(0).getObjects();
         //save the preset in the MonitorRAndomDataHolder (ugly name...)
@@ -52,23 +42,36 @@ public class MonitorMainActivity extends AppCompatActivity {
 
                 TableRow row = new TableRow(this);
                 TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+
                 row.setLayoutParams(lp);
                 TextView objectName = new TextView(this);
+
+                objectName.setGravity(Gravity.CENTER_VERTICAL);
+                //objectName.setGravity(Gravity.CENTER_HORIZONTAL);
+
                 objectName.setText(currentObject.getName());
                 TextView damageState = new TextView(this);
                 damageState.setText(actDamage.toString());
+                ImageView damageStateImg = new ImageView((this));
+                damageStateImg.setImageResource(R.mipmap.trafficred);
 
+                if (actDamage == InteractionObject.DamageState.Partial){
+                    damageStateImg.setImageResource(R.mipmap.trafficyellow);
+                }
+
+               // row.setBackgroundResource(R.drawable.monitorbgtable);
+                row.setGravity(Gravity.CENTER);
                 row.addView(objectName);
-                row.addView(damageState);
+
+                row.addView(damageStateImg);
 
                 try {
                     frameAlert.addView(row);
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-
-
         }
 
         //button pressed cat1 = Light
@@ -100,7 +103,6 @@ public class MonitorMainActivity extends AppCompatActivity {
             });
         }
 
-
         //click listener for category 2/triggered
         if (cat2 != null) {
             cat2.setOnClickListener(new OnClickListener() {
@@ -110,7 +112,6 @@ public class MonitorMainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     MonitorRandomDataHolder.setCategory(InteractionObject.TypOfCategory.Triggered);
-
                     System.out.println("triggered pressed");
                     Intent intent = new Intent(getActivity(), MonitorShowCategory.class);
                     startActivity(intent);
@@ -118,7 +119,7 @@ public class MonitorMainActivity extends AppCompatActivity {
             });
         }
 
-        //click listener for category 3/disply
+        //click listener for category 3/display
         if (cat3 != null) {
             cat3.setOnClickListener(new OnClickListener() {
                 //get all Light-InteractionObjects
@@ -151,7 +152,6 @@ public class MonitorMainActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
 
     public Context getActivity() {

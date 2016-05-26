@@ -16,9 +16,38 @@
         <TableLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
+            android:layout_height="fill_parent"
             android:isScrollContainer="true"
-            android:id="@+id/frameSensors">
+            android:id="@+id/frameSensors"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:layout_marginRight="30dp"
+            >
+
+            <TableRow>
+            <TextView android:text="Name"
+                android:textStyle="bold"
+                android:layout_column="0"
+
+                >
+            </TextView>
+            <TextView android:text="State of Damage"
+                android:textStyle="bold"
+                android:layout_column="1"
+                >
+            </TextView>
+            <TextView android:text="Description"
+                android:textStyle="bold"
+                android:layout_column="2"
+                >
+            </TextView>
+
+            <TextView android:text="On/Off State"
+                android:textStyle="bold"
+                android:layout_column="3"
+                >
+            </TextView>
+            </TableRow>
         </TableLayout>
     </ScrollView>
 </LinearLayout>

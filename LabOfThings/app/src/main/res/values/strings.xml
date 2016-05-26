@@ -25,7 +25,7 @@
     <string name="cat2">Light</string>
     <string name="cat3">Triggered</string>
     <string name="cat4"> Mechanic</string>
-    <string name="userMainCat">Categories</string>
+    <string name="userMainCat">Sensors by Categories</string>
     <string name="userMainFrequentlyUsed">Frequently used</string>
     <string name="frequency1">first</string>
     <string name="frequency2">second</string>
@@ -43,4 +43,5 @@
     <string name="iconTitle">Freepik</string>
     <string name="iconSource">http://www.flaticon.com</string>
     <string name="iconLicense">Icons Licence: http://creativecommons.org/licenses/by/3.0/</string>
+    <string name="alertHeadline">failed Sensors:</string>
 </resources>
