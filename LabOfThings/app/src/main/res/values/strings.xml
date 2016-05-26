@@ -30,4 +30,10 @@
     <string name="btn_preset_admin_choice">Choose Presetmanagement</string>
     <string name="btn_user_admin_choice">Choose Usermanagement</string>
     <string name="title_activity_tt">tt</string>
+    <string name="nameOfPreset">Name of preset: </string>
+    <string name="totalPresetListText">Total preset list:</string>
+    <string name="credits">Credits</string>
+    <string name="iconTitle">Freepik</string>
+    <string name="iconSource">http://www.flaticon.com</string>
+    <string name="iconLicense">Icons Licence: http://creativecommons.org/licenses/by/3.0/</string>
 </resources>

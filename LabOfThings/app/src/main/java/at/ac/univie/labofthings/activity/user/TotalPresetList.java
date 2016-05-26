@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class TotalPresetList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_total_preset_list);
+        setContentView(R.layout.activity_lab_total_preset_list);
         final PresetQuery presets=new PresetQuery();
         List<Preset>list= presets.getPresetList();
 
@@ -29,6 +30,7 @@ public class TotalPresetList extends AppCompatActivity {
 
         for(final Preset p: list) {
             final Button bx=new Button(this);
+            bx.setWidth(800);
             bx.setText(p.Name);
 
             bx.setOnClickListener(new View.OnClickListener() {

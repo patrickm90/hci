@@ -23,8 +23,9 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_dash_board);
 
         final Button button = (Button) findViewById(R.id.loginButton);
-        final TextView pw=(TextView)findViewById(R.id.password);
-        final TextView username=(TextView)findViewById(R.id.username);
+        final TextView pw = (TextView) findViewById(R.id.password);
+        final TextView username = (TextView) findViewById(R.id.username);
+        final Button creditButton = (Button) findViewById(R.id.creditButton);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -33,26 +34,23 @@ public class Login extends AppCompatActivity {
                 String pwStr = pw.getText().toString();
                 String usernameStr = username.getText().toString();
 
-                User user=UserQuery.Login(usernameStr,pwStr);
+                User user = UserQuery.Login(usernameStr, pwStr);
 
-                if(user==null){
-                    Toast.makeText(getApplicationContext(),"password or username is false",Toast.LENGTH_LONG).show();
-                }
-                else if(user.getUserType()== User.UserType.Admin){
-                    Toast.makeText(getApplicationContext(),"logged as Admin",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Login.this,AdminMainActivity.class);
+                if (user == null) {
+                    Toast.makeText(getApplicationContext(), "password or username is false", Toast.LENGTH_LONG).show();
+                } else if (user.getUserType() == User.UserType.Admin) {
+                    Toast.makeText(getApplicationContext(), "logged as Admin", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this, AdminMainActivity.class);
 
                     startActivity(intent);
-                }
-                else if(user.getUserType()== User.UserType.User){
-                    Toast.makeText(getApplicationContext(),"logged as User",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Login.this,UserMainActivity.class);
+                } else if (user.getUserType() == User.UserType.User) {
+                    Toast.makeText(getApplicationContext(), "logged as User", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this, UserMainActivity.class);
                     //Achtung UserMainActivity spinnt noch @martinTask
                     startActivity(intent);
-                }
-                else if(user.getUserType()== User.UserType.Monitor){
-                    Toast.makeText(getApplicationContext(),"logged as Monitor",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Login.this,MonitorMainActivity.class);
+                } else if (user.getUserType() == User.UserType.Monitor) {
+                    Toast.makeText(getApplicationContext(), "logged as Monitor", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this, MonitorMainActivity.class);
 
                     startActivity(intent);
                 }
@@ -60,5 +58,14 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        creditButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, Credits.class);
+
+                startActivity(intent);
+
+
+            }
+        });
     }
 }
