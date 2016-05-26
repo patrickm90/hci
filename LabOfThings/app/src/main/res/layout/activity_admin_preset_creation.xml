@@ -25,7 +25,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tbl_presetTable"
-        android:stretchColumns="0,1"
+        android:stretchColumns="0,1,2"
         android:id="@+id/tbl_sensorTable">
     </TableLayout>
 

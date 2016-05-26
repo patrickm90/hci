@@ -27,7 +27,7 @@
             android:drawableRight="@mipmap/groupmgmt"
             android:text="@string/btn_user_admin_choice"
             />
-        
+
 
     </LinearLayout>
 </RelativeLayout>
