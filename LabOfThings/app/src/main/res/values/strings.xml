@@ -6,11 +6,18 @@
     <string name="username_text">username</string>
     <string name="password_text">password</string>
     <string name="loginButton_text">login</string>
+    <string name="monitorThName">Name</string>
+    <string name="monitorThDamageState">state of Damage</string>
+    <string name="monitorThDescription">Description</string>
+    <string name="monitorThOnoffState">On/Off</string>
+    <string name="monitorCategory">Category</string>
+
     <string name="select_mode">Choose a mode</string>
     <string-array name="login_modes">
         <item>User</item>
         <item>Admin</item>
         <item>Controller</item>
+
     </string-array>
 
     <!-- MainUserStrings -->

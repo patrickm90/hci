@@ -19,9 +19,11 @@
         <activity android:name=".activity.monitor.MonitorMainActivity" />
         <activity android:name=".activity.user.UserMainActivity" />
         <activity android:name=".activity.admin.AdminPresetManagement" />
-        <activity android:name=".activity.admin.AdminUserManagement" />
+        <activity android:name=".activity.admin.AdminUserManagement"/>
+        <activity android:name=".activity.monitor.MonitorShowCategory"/>
         <activity android:name=".activity.admin.AdminUserCreation" />
-        <activity android:name=".activity.admin.AdminPresetCreation"></activity>
+        <activity android:name=".activity.admin.AdminPresetCreation"/>
+
     </application>
 
 </manifest>
