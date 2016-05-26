@@ -17,14 +17,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_preset_admin_choice"
+            android:drawableRight="@mipmap/presetsetting"
             android:text="@string/btn_preset_admin_choice"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_user_admin_choice"
+            android:drawableRight="@mipmap/groupmgmt"
             android:text="@string/btn_user_admin_choice"
             />
+
 
     </LinearLayout>
 </RelativeLayout>

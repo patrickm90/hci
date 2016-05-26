@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -66,21 +67,33 @@ public class AdminPresetCreation extends AppCompatActivity {
     }
     protected void addSensor()
     {
+        if(count > 100)
+            count = 0;
+
         InteractionObject interactionObject = PresetQuery.generateRandomInterActionObject(count);
         count++;
 
         TableLayout sensorTable = (TableLayout)findViewById(R.id.tbl_sensorTable);
         TableRow sensorRow = new TableRow(this);
         TextView sensorNameLabel = new TextView(this);
-        sensorNameLabel.setText(interactionObject.getClass().getSimpleName() + " " + count);
+        sensorNameLabel.setText(interactionObject.getClass().getSimpleName().substring(0,4) + " " + count);
 
         SeekBar slider = new SeekBar(this);
         slider.setProgress(new Random().nextInt(100));
 
+        Button btnEdit = new Button(this);
+        btnEdit.setText("Details");
+        btnEdit.setEnabled(false);
+        btnEdit.setWidth(50);
+        btnEdit.setMaxWidth(50);
+
         sensorRow.addView(sensorNameLabel);
         sensorRow.addView(slider);
+        sensorRow.addView(btnEdit);
 
         sensorTable.addView(sensorRow);
+
+
     }
     protected void btn_save_onClick(View v)
     {

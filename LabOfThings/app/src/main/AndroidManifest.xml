@@ -20,9 +20,10 @@
         <activity android:name=".activity.user.UserMainActivity" />
         <activity android:name=".activity.admin.AdminPresetManagement" />
         <activity android:name=".activity.user.TotalPresetList" />
-        <activity android:name=".activity.user.DisplayPreset"></activity>
-        <activity android:name=".activity.admin.AdminUserCreation" />
-        <activity android:name=".activity.admin.AdminPresetCreation"></activity>
+        <activity android:name=".activity.monitor.MonitorShowCategory"/>
+        <activity android:name=".activity.admin.AdminUserCreation"/>
+		<activity android:name=".activity.user.DisplayPreset"/>        <activity android:name=".activity.admin.AdminPresetCreation"/>
+
         <activity android:name=".activity.Credits"/>
     </application>
 
