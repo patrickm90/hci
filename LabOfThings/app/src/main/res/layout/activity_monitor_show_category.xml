@@ -21,7 +21,6 @@
             android:id="@+id/frameSensors"
             android:shrinkColumns="*"
             android:stretchColumns="*"
-            android:layout_marginRight="30dp"
             >
 
             <TableRow>
