@@ -3,6 +3,10 @@ package at.ac.univie.labofthings.backend.interaction;
 /**
  * Created by Patrick on 17/05/2016.
  */
+
+/**
+ * Class for a drone object
+ */
 public class Drone extends InteractionObject {
     private int x;
     private int y;

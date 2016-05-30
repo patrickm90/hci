@@ -4,6 +4,9 @@ package at.ac.univie.labofthings.backend.session;
  * Created by Patrick on 13/05/2016.
  */
 
+/**
+ * Defines a user
+ */
 public class User {
     public static enum UserType
     {

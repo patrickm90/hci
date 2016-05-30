@@ -13,8 +13,17 @@ import at.ac.univie.labofthings.backend.interaction.SpeechRecognition;
 /**
  * Created by Patrick on 17/05/2016.
  */
+
+/**
+ * Provides method to query different presets
+ */
 public class PresetQuery {
 
+    /**
+     * Gets an interaction object
+     * @param number number of the sensor actor
+     * @return an interaction object
+     */
     public static InteractionObject generateRandomInterActionObject(int number)
     {
         int rd = new Random().nextInt(4);
@@ -39,6 +48,10 @@ public class PresetQuery {
         return null;
     }
 
+    /**
+     * Gets a list of presets
+     * @return a list of presets
+     */
     public static List<Preset> getPresetList()
     {
         List<Preset> presets = new ArrayList<>();

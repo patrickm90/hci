@@ -15,9 +15,12 @@ public class AdminMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main);
 
+        setTitle("Admin Dashboard");
+
         final Button btn_preset_admin_choice = (Button) findViewById(R.id.btn_preset_admin_choice);
         final Button btn_user_admin_choice = (Button) findViewById(R.id.btn_user_admin_choice);
 
+        //Event for the preset Management
         btn_preset_admin_choice.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent presetManagementIntent = new Intent(getBaseContext(), AdminPresetManagement.class);
@@ -25,6 +28,7 @@ public class AdminMainActivity extends AppCompatActivity {
 
             }
         });
+        //Event for the user Management
         btn_user_admin_choice.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent userManagementIntent = new Intent(getBaseContext(), AdminUserManagement.class);

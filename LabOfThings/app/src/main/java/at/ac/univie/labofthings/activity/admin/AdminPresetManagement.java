@@ -22,10 +22,12 @@ public class AdminPresetManagement extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Preset Management");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_preset_management);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //Register handler to create a new preset...
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,6 +39,10 @@ public class AdminPresetManagement extends AppCompatActivity {
 
         BuildPresetTable();
     }
+
+    /**
+     * Table for each preset in the given context
+     */
     protected void BuildPresetTable()
     {
         TableLayout presetTable = (TableLayout)findViewById(R.id.tbl_presetTable);
@@ -68,6 +74,7 @@ public class AdminPresetManagement extends AppCompatActivity {
 
         tableHeaderRow.addView(spaceRow);
 
+        //List each each preset...
         for(Preset preset : PresetQuery.getPresetList())
         {
             TableRow presetRow = new TableRow(this);

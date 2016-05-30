@@ -5,14 +5,25 @@ import java.util.Random;
 /**
  * Created by Patrick on 13/05/2016.
  */
+
+/**
+ * Base class for each sensor actor
+ */
 public class InteractionObject {
 
+    /**
+     * State of the object
+     */
     public enum DamageState
     {
         Totally,
         Partial,
         None
     }
+
+    /**
+     * Tpye of the object
+     */
     public enum TypOfCategory
     {
         Display,

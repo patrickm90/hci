@@ -26,6 +26,7 @@ public class AdminUserManagement extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("User Management");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_user_management);
 
@@ -41,6 +42,10 @@ public class AdminUserManagement extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Table for the users..
+     */
     protected void showUsers()
     {
         TableLayout userTable = (TableLayout) findViewById(R.id.tbl_userTable);
@@ -88,7 +93,7 @@ public class AdminUserManagement extends AppCompatActivity {
             CheckBox isAdmin = new CheckBox(this);
             CheckBox isMonitoring = new CheckBox(this);
             CheckBox isUser = new CheckBox(this);
-
+            //Permission part..
             if(user.getUserType() == User.UserType.Admin)
             {
                 isAdmin.setChecked(true);

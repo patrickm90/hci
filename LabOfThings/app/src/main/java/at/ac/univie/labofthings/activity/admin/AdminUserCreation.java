@@ -16,12 +16,17 @@ public class AdminUserCreation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Create User");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_user_creation);
 
         buildUserTable();
 
     }
+
+    /**
+     * Builds a table for the user information to enter...
+     */
     protected void buildUserTable()
     {
         TableLayout userTable = (TableLayout) findViewById(R.id.tbl_userTable);
@@ -85,8 +90,14 @@ public class AdminUserCreation extends AppCompatActivity {
         userTable.addView(buttonSpaceRow);
 
     }
+
+    /**
+     * Button click
+     * @param v
+     */
     public void btn_save_onClick(View v)
     {
+        //Exit the activity
         finish();
     }
 }

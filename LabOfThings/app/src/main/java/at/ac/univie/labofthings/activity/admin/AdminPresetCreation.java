@@ -25,6 +25,7 @@ public class AdminPresetCreation extends AppCompatActivity {
     private String presetName = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Create Preset");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_preset_creation);
 
@@ -36,8 +37,10 @@ public class AdminPresetCreation extends AppCompatActivity {
             }
         });
 
+        //if it is a preset edit operation
         if(this.getIntent().getBooleanExtra("Edit", false))
         {
+            setTitle("Edit Preset");
             int sensorCount = this.getIntent().getIntExtra("SensorCount", 0);
             presetName = this.getIntent().getStringExtra("PresetName");
 
@@ -48,6 +51,10 @@ public class AdminPresetCreation extends AppCompatActivity {
 
         BuildTable();
     }
+
+    /**
+     * Table for the Preset meta data information
+     */
     protected void BuildTable()
     {
         TableLayout presetTable = (TableLayout)findViewById(R.id.tbl_presetTable);
@@ -65,6 +72,10 @@ public class AdminPresetCreation extends AppCompatActivity {
 
         presetTable.addView(presetNameRow);
     }
+
+    /**
+     * Table for the different sensors and actors
+     */
     protected void addSensor()
     {
         if(count > 100)

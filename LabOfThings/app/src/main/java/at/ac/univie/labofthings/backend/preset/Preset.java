@@ -8,6 +8,10 @@ import at.ac.univie.labofthings.backend.interaction.InteractionObject;
 /**
  * Created by Patrick on 17/05/2016.
  */
+
+/**
+ * Defines a preset
+ */
 public class Preset {
     public String Name;
 

@@ -5,6 +5,10 @@ import at.ac.univie.labofthings.backend.interaction.InteractionObject;
 /**
  * Created by Patrick on 13/05/2016.
  */
+
+/**
+ * Class for a light object
+ */
 public class LightSensor extends InteractionObject {
     private Boolean lightIntensityAvailable = false;
     private Boolean lightRGBColorCodeAvailable = false;

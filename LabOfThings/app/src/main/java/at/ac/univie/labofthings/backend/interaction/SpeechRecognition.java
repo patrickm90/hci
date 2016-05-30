@@ -5,6 +5,10 @@ import java.util.Random;
 /**
  * Created by Patrick on 17/05/2016.
  */
+
+/**
+ * Class for a speech object
+ */
 public class SpeechRecognition extends InteractionObject {
     private Boolean listenIsActive = false;
 
