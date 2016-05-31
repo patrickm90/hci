@@ -20,6 +20,7 @@ public class TotalPresetList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Lab show list");
         setContentView(R.layout.activity_lab_total_preset_list);
         final PresetQuery presets=new PresetQuery();
         List<Preset>list= presets.getPresetList();
