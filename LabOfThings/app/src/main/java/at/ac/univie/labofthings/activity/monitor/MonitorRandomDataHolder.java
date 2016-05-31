@@ -6,7 +6,9 @@ import at.ac.univie.labofthings.backend.interaction.InteractionObject;
 
 public class MonitorRandomDataHolder {
     private static List<InteractionObject> allSensors;
+    private static InteractionObject.TypOfCategory category;
 
+    //getter and setter
     public static InteractionObject.TypOfCategory getCategory() {
         return category;
     }
@@ -15,8 +17,6 @@ public class MonitorRandomDataHolder {
         MonitorRandomDataHolder.category = category;
     }
 
-    private static InteractionObject.TypOfCategory category;
-
     public static void setAllSensors(List<InteractionObject> allSensors) {
         MonitorRandomDataHolder.allSensors = allSensors;
     }
@@ -24,8 +24,5 @@ public class MonitorRandomDataHolder {
     public static List<InteractionObject> getAllSensors() {
         return allSensors;
     }
-
-
-
 
 }

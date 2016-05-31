@@ -28,52 +28,21 @@ public class MonitorMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(activity_monitor_main);
 
+        //get the alert Table
         TableLayout frameAlert = (TableLayout) findViewById(R.id.frameAlert);
 
         firstPreset = PresetQuery.getPresetList().get(0).getObjects();
-        //save the preset in the MonitorRAndomDataHolder (ugly name...)
+        //save the preset in the MonitorRAndomDataHolder
         MonitorRandomDataHolder.setAllSensors(firstPreset);
 
-        for (InteractionObject currentObject :  firstPreset){
+        //generate the alert Table
+        setAlert(frameAlert);
 
-            //generate the "alert" section
-            InteractionObject.DamageState actDamage = currentObject.checkForPossibleDamage();
-            if (actDamage != InteractionObject.DamageState.None) {
+        //generate the category buttons
+        setCategories();
+    }
 
-                TableRow row = new TableRow(this);
-                TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
-
-                row.setLayoutParams(lp);
-                TextView objectName = new TextView(this);
-
-                objectName.setGravity(Gravity.CENTER_VERTICAL);
-                //objectName.setGravity(Gravity.CENTER_HORIZONTAL);
-
-                objectName.setText(currentObject.getName());
-                TextView damageState = new TextView(this);
-                damageState.setText(actDamage.toString());
-                ImageView damageStateImg = new ImageView((this));
-                damageStateImg.setImageResource(R.mipmap.trafficred);
-
-                if (actDamage == InteractionObject.DamageState.Partial){
-                    damageStateImg.setImageResource(R.mipmap.trafficyellow);
-                }
-
-               // row.setBackgroundResource(R.drawable.monitorbgtable);
-                row.setGravity(Gravity.CENTER);
-                row.addView(objectName);
-
-                row.addView(damageStateImg);
-
-                try {
-                    frameAlert.addView(row);
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
+    protected  void setCategories(){
         //button pressed cat1 = Light
         Button cat1 = (Button) findViewById(R.id.cat1Button);
 
@@ -153,7 +122,47 @@ public class MonitorMainActivity extends AppCompatActivity {
             });
         }
     }
+    protected void setAlert(TableLayout frameAlert){
+        for (InteractionObject currentObject :  firstPreset){
 
+            //generate the "alert" section
+            InteractionObject.DamageState actDamage = currentObject.checkForPossibleDamage();
+            if (actDamage != InteractionObject.DamageState.None) {
+
+                TableRow row = new TableRow(this);
+                TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+
+                row.setLayoutParams(lp);
+                TextView objectName = new TextView(this);
+
+                objectName.setGravity(Gravity.CENTER_VERTICAL);
+                //objectName.setGravity(Gravity.CENTER_HORIZONTAL);
+
+                objectName.setText(currentObject.getName());
+                TextView damageState = new TextView(this);
+                damageState.setText(actDamage.toString());
+                ImageView damageStateImg = new ImageView((this));
+                damageStateImg.setImageResource(R.mipmap.trafficred);
+
+                if (actDamage == InteractionObject.DamageState.Partial){
+                    damageStateImg.setImageResource(R.mipmap.trafficyellow);
+                }
+
+                // row.setBackgroundResource(R.drawable.monitorbgtable);
+                row.setGravity(Gravity.CENTER);
+                row.addView(objectName);
+
+                row.addView(damageStateImg);
+
+                try {
+                    frameAlert.addView(row);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
     public Context getActivity() {
         return this;
     }
