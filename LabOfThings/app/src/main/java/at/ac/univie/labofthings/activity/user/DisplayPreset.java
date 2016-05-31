@@ -23,7 +23,7 @@ public class DisplayPreset extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_display_preset);
-       // BuildTable();
+        setTitle("Lab show preset");
         Intent i=getIntent();
         String presetName = i.getStringExtra("preset");
        int sensorCount= (int)((Math.random()) * 6 + 1);

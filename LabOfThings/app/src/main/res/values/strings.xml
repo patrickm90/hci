@@ -1,5 +1,6 @@
 <resources>
     <!-- DashBoardStrings -->
+    <string name="name"></string>
     <string name="app_name">LabOfThings</string>
     <string name="test">test</string>
     <string name="login_text">Please enter your username and password</string>

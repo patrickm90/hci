@@ -17,7 +17,7 @@ public class UserMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_main);
-
+        setTitle("Lab");
         presets=new PresetQuery();
         Button frequency1= (Button)findViewById(R.id.frequencyButton1);
         Button frequency2= (Button)findViewById(R.id.frequencyButton2);
